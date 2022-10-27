@@ -1,0 +1,38 @@
+@import '../../../config-scss/rem-calc.scss';
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  height: rem-calc(48);
+  align-items: center;
+
+  background: var(--background-header);
+
+  p {
+    color: var(--secondary-color);
+
+    span{
+      color: var(--white);
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+  }
+
+  ul {
+    display: flex;
+    gap: 1.5rem;
+
+    a {
+      color: var(--primary-color);
+      font-weight: 700;
+    }
+
+    a:hover {
+      color: var(--secondary-color);
+    }
+  }
+
+
+}
+
+
