@@ -1,0 +1,45 @@
+article {
+  margin-top: 28px;
+  text-align: center;
+  background: white;
+  padding: 1rem;
+  margin-right: 1rem;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .image-container {
+
+    img {
+      width: 100%;
+    }
+  }
+
+  p {
+    margin: 1.8rem 0;
+    text-align: justify;
+
+    &::first-letter {
+      text-transform: capitalize;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #05b59d;
+    }
+  }
+
+  button {
+    background: #05b59d;
+    padding: 0.8rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+
+    a{
+      color: #bf9c28;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+  }
+}

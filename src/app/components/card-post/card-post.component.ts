@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 interface IPost {
   id: number;
@@ -13,7 +14,7 @@ interface IPost {
   styleUrls: ["./card-post.component.scss"],
 })
 export class CardPostComponent implements OnInit {
-  constructor() {}
+  constructor(private router: Router) {}
 
   posts: IPost[];
 
@@ -25,5 +26,9 @@ export class CardPostComponent implements OnInit {
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((response) => response.json())
       .then((data: IPost[]) => (this.posts = data));
+  }
+
+  goToPostDetails(post: IPost, id: string) {
+    this.router.navigateByUrl(`/detail/${{ id }}`, { state: post });
   }
 }

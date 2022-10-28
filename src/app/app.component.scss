@@ -5,4 +5,11 @@
 }
 .container-main {
   display: flex;
+  //flex-wrap: wrap;
+
+  app-details-post {
+    width: 80%;
+    text-align: center;
+  }
 }
+
