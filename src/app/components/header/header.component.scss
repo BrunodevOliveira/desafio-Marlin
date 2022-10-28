@@ -14,7 +14,7 @@ nav {
     span{
       color: var(--white);
       font-weight: 700;
-      letter-spacing: 2px;
+      letter-spacing: rem-calc(2);
     }
   }
 
