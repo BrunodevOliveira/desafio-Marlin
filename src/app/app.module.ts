@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { CardPostComponent } from './components/card-post/card-post.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { DetailsPostComponent } from './components/details-post/details-post.component';
+import { AddPostComponent } from './components/add-post/add-post.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { DetailsPostComponent } from './components/details-post/details-post.com
     HeaderComponent,
     CardPostComponent,
     SidebarComponent,
-    DetailsPostComponent
+    DetailsPostComponent,
+    AddPostComponent
   ],
   imports: [
     BrowserModule,
