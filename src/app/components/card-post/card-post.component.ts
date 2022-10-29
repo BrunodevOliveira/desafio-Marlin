@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
+import { PlaceholderApiService } from "src/app/services/placeholder-api.service";
 
 interface IPost {
   id: number;
@@ -14,21 +14,13 @@ interface IPost {
   styleUrls: ["./card-post.component.scss"],
 })
 export class CardPostComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private postsApi: PlaceholderApiService) {}
 
   posts: IPost[];
 
   ngOnInit() {
-    this.getPosts();
-  }
-
-  getPosts() {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((response) => response.json())
-      .then((data: IPost[]) => (this.posts = data));
-  }
-
-  goToPostDetails(post: IPost, id: string) {
-    this.router.navigateByUrl(`/detail/${{ id }}`, { state: post });
+    this.postsApi.getAllPosts().subscribe((result: IPost[]) => {
+      this.posts = result;
+    });
   }
 }
