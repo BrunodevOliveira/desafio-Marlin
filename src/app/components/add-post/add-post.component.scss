@@ -1,0 +1,80 @@
+@import '../../../config-scss/rem-calc.scss';
+
+form {
+  margin: 1.5rem 1rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 70vh;
+  color: white;
+  padding: 0.8rem;
+  border-radius: rem-calc(12);
+
+  fieldset{
+    border: 3px solid var(--border-form);
+    margin: 1rem;
+    padding-top: 2rem;
+    height: 80%;
+
+    legend{
+      border: 1px solid var(--border-form);
+      padding: rem-calc(10);
+      text-align: center;
+      background-color: var(--border-form);
+      border-radius:rem-calc(4);
+      font-weight: bolder;
+    }
+
+    .form-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+
+      label {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        gap: 0.35rem;
+
+        input, textarea {
+          width: 100%;
+          padding: 1rem;
+          border: 0.125rem solid transparent;
+          border-radius: 1.125rem;
+
+          color: white;
+          background: #323644;
+          transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input:hover,
+        input:focus,
+        textarea:hover,
+        textarea:focus {
+          outline: none;
+          border-color: var(--border-form);;
+          box-shadow: 0 0 0 0.3125rem #26344a;
+        }
+      }
+
+      button {
+        width: 50%;
+        margin: 0 auto;
+        padding: 1.5rem;
+        border: none;
+        border-radius: rem-calc(99);
+
+        color: white;
+        background:  #1d90f5;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover, &:focus {
+          outline: none;
+          background: var(--primary-color);
+        }
+      }
+    }
+
+
+  }
+}
