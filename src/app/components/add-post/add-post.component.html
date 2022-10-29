@@ -13,4 +13,11 @@
       <button [disabled]="frm.invalid">Enviar</button>
     </div>
   </fieldset>
+
+  <dialog class="modal">
+    <h2>{{postCreated.title}}</h2>
+    <p>{{postCreated.body}}</p>
+    <button routerLink="/noticias">Fechar</button>
+  </dialog>
 </form>
+

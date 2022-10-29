@@ -6,6 +6,13 @@ interface IForm {
   message: string;
 }
 
+interface IPost {
+  id: number;
+  title: string;
+  body: string;
+  userId: number;
+}
+
 @Component({
   selector: "app-add-post",
   templateUrl: "./add-post.component.html",
@@ -18,6 +25,13 @@ export class AddPostComponent implements OnInit {
     title: "",
     message: "",
   };
+
+  postCreated: IPost;
+
+  openModal() {
+    const modal = document.querySelector("dialog");
+    modal.showModal();
+  }
 
   createPost() {
     fetch("https://jsonplaceholder.typicode.com/posts", {
@@ -32,8 +46,8 @@ export class AddPostComponent implements OnInit {
       },
     })
       .then((response) => response.json())
-      .then((json) => console.log(json));
-    this.router.navigate(["/"]);
+      .then((post: IPost) => (this.postCreated = post));
+    this.openModal();
   }
 
   ngOnInit() {}
