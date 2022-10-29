@@ -1,17 +1,16 @@
-<form>
+<form #frm="ngForm" (ngSubmit)="createPost()">
   <fieldset>
     <legend>Cadastre sua notícia</legend>
     <div class="form-content">
       <label for="title">
         Título
-        <input type="text" name="title" id="title" required />
+        <input type="text" [(ngModel)]="data.title" name="title" id="title" required />
       </label>
       <label for="message">
         Notícia
-        <textarea name="message" id="message"  rows="10" required></textarea>
+        <textarea name="message" [(ngModel)]="data.message" id="message"  rows="10" required></textarea>
       </label>
-      <button>Enviar</button>
+      <button [disabled]="frm.invalid">Enviar</button>
     </div>
   </fieldset>
 </form>
-

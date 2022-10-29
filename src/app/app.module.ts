@@ -1,13 +1,14 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { CardPostComponent } from './components/card-post/card-post.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { DetailsPostComponent } from './components/details-post/details-post.component';
-import { AddPostComponent } from './components/add-post/add-post.component';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { HeaderComponent } from "./components/header/header.component";
+import { CardPostComponent } from "./components/card-post/card-post.component";
+import { SidebarComponent } from "./components/sidebar/sidebar.component";
+import { DetailsPostComponent } from "./components/details-post/details-post.component";
+import { AddPostComponent } from "./components/add-post/add-post.component";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -16,13 +17,10 @@ import { AddPostComponent } from './components/add-post/add-post.component';
     CardPostComponent,
     SidebarComponent,
     DetailsPostComponent,
-    AddPostComponent
+    AddPostComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
