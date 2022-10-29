@@ -1,17 +1,7 @@
+import { IPost } from "./../../interfaces/post.model";
+import { IForm } from "./../../interfaces/form.model";
 import { Component, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
-
-interface IForm {
-  title: string;
-  message: string;
-}
-
-interface IPost {
-  id: number;
-  title: string;
-  body: string;
-  userId: number;
-}
+import { PlaceholderApiService } from "src/app/services/placeholder-api.service";
 
 @Component({
   selector: "app-add-post",
@@ -19,14 +9,19 @@ interface IPost {
   styleUrls: ["./add-post.component.scss"],
 })
 export class AddPostComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private postsApi: PlaceholderApiService) {}
 
   data: IForm = {
     title: "",
     message: "",
   };
 
-  postCreated: IPost;
+  postCreated: IPost = {
+    id: 1,
+    title: "",
+    userId: 1,
+    message: "",
+  };
 
   openModal() {
     const modal = document.querySelector("dialog");
@@ -34,20 +29,10 @@ export class AddPostComponent implements OnInit {
   }
 
   createPost() {
-    fetch("https://jsonplaceholder.typicode.com/posts", {
-      method: "POST",
-      body: JSON.stringify({
-        title: this.data.title,
-        body: this.data.message,
-        userId: 1,
-      }),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    })
-      .then((response) => response.json())
-      .then((post: IPost) => (this.postCreated = post));
-    this.openModal();
+    this.postsApi.addPost(this.data).subscribe((result: IPost) => {
+      this.postCreated = result;
+      this.openModal();
+    });
   }
 
   ngOnInit() {}

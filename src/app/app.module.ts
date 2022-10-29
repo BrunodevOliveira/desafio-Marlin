@@ -9,6 +9,7 @@ import { SidebarComponent } from "./components/sidebar/sidebar.component";
 import { DetailsPostComponent } from "./components/details-post/details-post.component";
 import { AddPostComponent } from "./components/add-post/add-post.component";
 import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { FormsModule } from "@angular/forms";
     DetailsPostComponent,
     AddPostComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
