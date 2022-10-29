@@ -1,7 +1,22 @@
-<nav>
-  <p>Desafio <span>Marlin</span></p>
-  <ul>
-    <li><a href="/">Notícias</a></li>
-    <li><a routerLink="/criar-post" >Criar nova notícia</a></li>
-  </ul>
+<nav class="nav">
+  <div class="content">
+    <p class="brand" routerLink="/">Desafio <span>Marlin</span></p>
+    <div class="links nav-items">
+      <a routerLink="/">Notícias</a>
+      <a routerLink="/criar-post">Cadastrar<span class="t">Notícia</span></a>
+    </div>
+    <div class="menu" (click)="onMenu()">
+      <input type="checkbox" hidden id="hamburger" />
+      <label for="hamburger" [hidden]="isOpen">&#9776;</label>
+      <label for="hamburger" [hidden]="!isOpen">&#10006;</label>
+    </div>
+    <div class="dropdown" id="dropdown" [class.show]="isOpen">
+      <a href="/">Notícias</a>
+      <a routerLink="/criar-post" >Criar nova notícia</a>
+      <a  href="/">Serviços</a>
+      <a href="/">Depoimentos</a>
+      <a href="/">Parceiros</a>
+      <a href="/">Contato</a>
+    </div>
+  </div>
 </nav>
