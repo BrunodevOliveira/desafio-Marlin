@@ -1,13 +1,8 @@
+import { IPost } from "./../../interfaces/post.model";
 import { PlaceholderApiService } from "src/app/services/placeholder-api.service";
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 
-interface IPost {
-  id: number;
-  title: string;
-  body: string;
-  userId: number;
-}
 @Component({
   selector: "app-details-post",
   templateUrl: "./details-post.component.html",

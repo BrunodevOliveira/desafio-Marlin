@@ -1,12 +1,6 @@
+import { IPost } from "./../../interfaces/post.model";
 import { Component, OnInit } from "@angular/core";
 import { PlaceholderApiService } from "src/app/services/placeholder-api.service";
-
-interface IPost {
-  id: number;
-  title: string;
-  body: string;
-  userId: number;
-}
 
 @Component({
   selector: "app-card-post",

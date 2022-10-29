@@ -1,17 +1,7 @@
+import { IPost } from "./../../interfaces/post.model";
+import { IForm } from "./../../interfaces/form.model";
 import { Component, OnInit } from "@angular/core";
 import { PlaceholderApiService } from "src/app/services/placeholder-api.service";
-
-interface IForm {
-  title: string;
-  message: string;
-}
-
-interface IPost {
-  id: number;
-  title: string;
-  userId: number;
-  message?: string;
-}
 
 @Component({
   selector: "app-add-post",
