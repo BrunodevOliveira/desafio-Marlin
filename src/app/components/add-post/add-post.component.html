@@ -10,14 +10,14 @@
         Notícia
         <textarea name="message" [(ngModel)]="data.message" id="message"  rows="10" required></textarea>
       </label>
-      <button [disabled]="frm.invalid">Enviar</button>
+      <button class="submit-btn" [disabled]="frm.invalid">Enviar</button>
     </div>
   </fieldset>
 
-  <dialog class="modal">
-    <h2>{{postCreated.title}}</h2>
-    <p>{{postCreated.message}}</p>
-    <button routerLink="/noticias">Fechar</button>
-  </dialog>
 </form>
+<dialog class="modal">
+  <h2>{{postCreated.title}}</h2>
+  <p>{{postCreated.message}}</p>
+  <button routerLink="/noticias">Fechar</button>
+</dialog>
 
