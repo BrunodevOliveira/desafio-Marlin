@@ -1,8 +1,8 @@
-<div class="container">
-  <div *ngFor="let post of posts"  class="card">
+<section class="container" >
+  <div class="card" *ngFor="let post of posts | slice: startIndex:endIndex"  >
     <div class="image-container">
       <img src="https://marlin.com.br/images/portfolio/1/produto-marlin.jpg"
-        alt="Logo da empresa Marlin com a palavra 'Produto' escrito acima"
+      alt="Logo da empresa Marlin com a palavra 'Produto' escrito acima"
       >
     </div>
     <div class="content">
@@ -11,5 +11,19 @@
       <a routerLink="/detail/{{ post.id }}" >Leia mais</a>
     </div>
   </div>
-</div>
-
+</section>
+<ul class="pagination" *ngIf="posts">
+  <li
+    class="page-item"
+    *ngFor="let i of getArrayLenght(posts.length); let n = index"
+  >
+    <a class="page-link" (click)="getIndex(n)">{{ n + 1 }}</a>
+  </li>
+</ul>
+<!-- *ngFor="let post of posts" -->
+<!-- [ngStyle]="{
+  background: 'var(--primary-color)',
+  fontWeight : '600',
+  color: 'white',
+  borderRadius: '4px',
+}" -->

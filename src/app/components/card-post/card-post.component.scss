@@ -1,3 +1,29 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 0.8rem;
+  margin-bottom: 1.5rem;
+
+  .page-item {
+    padding: 0.8rem;
+
+    // background: var(--primary-color);
+    // font-weight: 600;
+    // color: white;
+    // border-radius: 4px;
+  }
+
+  .page-link {
+    cursor: pointer;
+
+    &:hover {
+      color: blue;
+      font-weight: 700;
+    }
+  }
+}
+
 
 .container {
   // width: 100%;
