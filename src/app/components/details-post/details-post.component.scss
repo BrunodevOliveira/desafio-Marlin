@@ -1,9 +1,10 @@
+@import '../../../config-scss/rem-calc.scss';
+
 article {
-  margin-top: 28px;
+  margin: rem-calc(28) 1rem;
   text-align: center;
   background: white;
   padding: 1rem;
-  margin-right: 1rem;
 
   h2 {
     font-size: 2rem;

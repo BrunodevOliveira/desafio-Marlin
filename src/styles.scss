@@ -12,10 +12,15 @@ main {
   max-width: rem-calc(900);
   margin: 0 auto;
   box-sizing: border-box;
+
 }
 
 app-details-post {
   width: 75%;
+
+  @media(max-width: 768px) {
+    width: 100%;
+  }
 }
 
 app-add-post {
