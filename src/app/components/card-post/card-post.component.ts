@@ -14,10 +14,12 @@ export class CardPostComponent implements OnInit {
   endIndex = 10;
   itemsPerPage = 10;
   posts: IPost[];
+  loading = true;
 
   ngOnInit() {
     this.postsApi.getAllPosts().subscribe((result: IPost[]) => {
       this.posts = result;
+      this.loading = false;
     });
   }
 
@@ -28,6 +30,5 @@ export class CardPostComponent implements OnInit {
   getIndex(pageIndex: number) {
     this.startIndex = pageIndex * this.itemsPerPage;
     this.endIndex = this.startIndex + this.itemsPerPage;
-    console.log(pageIndex);
   }
 }
