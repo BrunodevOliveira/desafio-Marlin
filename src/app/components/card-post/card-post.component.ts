@@ -28,5 +28,6 @@ export class CardPostComponent implements OnInit {
   getIndex(pageIndex: number) {
     this.startIndex = pageIndex * this.itemsPerPage;
     this.endIndex = this.startIndex + this.itemsPerPage;
+    console.log(pageIndex);
   }
 }
