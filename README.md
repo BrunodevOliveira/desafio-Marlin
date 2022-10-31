@@ -1,27 +1,61 @@
-# DesafioMarlin
+<p align="center">
+<img  src="https://marlin.com.br/images/logo-branca.png" width="400"/>
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.8.
+<h1 align="center">Desafio técnico</h1>
 
-## Development server
+<br>
+<br>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+> ## Sobre o Projeto 🔎
 
-## Code scaffolding
+> Implementação desenvolvida como teste técnico para vaga de estágio/trainee Front-end Angular na Marlin consumindo informações através da API ``https://jsonplaceholder.typicode.com/``
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Etapas 🪜
 
-## Build
+### Requisítos 🎯
+- [x] Fazer o HTML/CSS estático e responsivo de acordo com a imagem em anexo.
+- [x] Criar um projeto com Angular 8 (Angular CLI) e integrar a listagem dos posts (noticias) feito na 1ª Etapa consumindo as informações com WebAPI (GET).
+Para alimentar a lista pode usar somente as propriedades title e body do método GET.
+- [x]  Criar uma página para cadastrar novos post (noticias) e outra para o detalhe. A estrutura da página é livre. A sugestão é  manter a mesma linha visual da imagem em anexo. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Features ✨
+- [x] Paginação dos cards
+- [x] Spinner de Loading na pagina inicial
+- [x] Menu Mobile
+- [x] Deploy da aplicação
+<br>
+<br>
 
-## Running unit tests
+> ## Tecnologias Utilizadas 🧰
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<p>
+<img align="left" align="left" alt="git" src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
+<img align="left" align="left" alt="git" src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
+<img align="left" align="left" alt="git" src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" />
+<img align="left" align="left" alt="git" src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" height="27"/> 
+  
+</p>  
 
-## Running end-to-end tests
+<br> 
+<br>
+<br>
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+> ## Layout 🎨
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/85235164/199071989-86cd88e3-f2f1-4630-aca5-1bc3e5b36dcb.gif" />
+</div>
 
-## Further help
+> ## Link para o site 💻
+> https://desafio-marlin-front.vercel.app/
+<br>
+<br>
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+> ## Instalação 🎛️
+1) Abra o terminal e digite:
+``git clone https://github.com/BrunodevOliveira/desafio-Marlin.git``
+2) Abra o terminal na pasta da aplicação clonada e digite:
+``npm install``
+3) Após concluir as instalações, digite este comando para que a aplicação abra automaticamente em seu navegador padrão:
+``ng serve -o``
+
