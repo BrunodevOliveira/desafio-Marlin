@@ -3,7 +3,10 @@
   <div *ngIf="loading"  class="container-spinner">
     <div  class="spinner"></div>
   </div>
-
+  <div *ngIf="posts" class="result-search">
+    <h1>Exibindo resultados de busca por "Projetos Marlin"</h1>
+    <p>Encontramos um total de {{posts.length}} resultados para sua busca</p>
+  </div>
   <div class="card" *ngFor="let post of posts | slice: startIndex:endIndex"  >
     <div class="image-container">
       <img src="https://marlin.com.br/images/portfolio/1/produto-marlin.jpg"

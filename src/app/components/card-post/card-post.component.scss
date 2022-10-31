@@ -1,3 +1,5 @@
+@import '../../../config-scss/rem-calc.scss';
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -51,6 +53,33 @@
 
       @keyframes spin {
         to{ transform: rotate(360deg); }
+      }
+    }
+  }
+
+  .result-search {
+    margin: 1.5rem auto;
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    p {
+      text-align: center;
+      font-size: rem-calc(15);
+      margin-top: rem-calc(9);
+      color: rgba(0, 0, 0, .5);
+    }
+
+    @media(max-width: 570px) {
+      h1 {
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
+      p {
+        font-size: rem-calc(12);
       }
     }
   }
